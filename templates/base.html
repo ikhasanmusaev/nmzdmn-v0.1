@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nomzodman</title>
+</head>
+<body>
+
+<form action="/" method="post">
+    <p>Your name: <input type="text" name="name" required></p>
+    {% for question in questions %}
+        <p>
+            N {{ question.n }}. {{ question.q }} <input type="checkbox" name="{{ question.n }}-{{ question.a }}">
+        </p>
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
